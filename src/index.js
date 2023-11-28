@@ -10,60 +10,63 @@ const importAllImages = (function () {
   );
 })();
 
-const openMenu = (function () {
+const selectNavElements = (function () {
+  // openMenu fxn
   const closedMenu = document.querySelector("body > div");
   const nav = document.querySelector("nav");
-
-  closedMenu.addEventListener("click", () => {
-    closedMenu.style.display = "none";
-    nav.style.display = "flex";
-  });
-
-  return { closedMenu, nav };
-})();
-
-const closedMenu = (function () {
+  // closeMenu fxn
   const openedMenu = document.querySelectorAll(
     "nav > section:first-child > div > *",
   );
+  // styleMenu fxn
+  const menuSpan = document.querySelector("nav > section:first-child span");
+  const menuImg = document.querySelector("nav > section:first-child img");
+  // hoveringEffectOnNavDivs fxn
+  const navDivs = document.querySelectorAll(
+    ".sec-section > div, .last-section > div",
+  );
 
-  openedMenu.forEach((element) => {
+  return { closedMenu, nav, openedMenu, menuSpan, menuImg, navDivs };
+})();
+
+const openMenu = (function () {
+  selectNavElements.closedMenu.addEventListener("click", () => {
+    selectNavElements.closedMenu.style.display = "none";
+    selectNavElements.nav.style.display = "flex";
+  });
+})();
+
+const closeMenu = (function () {
+  selectNavElements.openedMenu.forEach((element) => {
     element.addEventListener("click", () => {
-      openMenu.nav.style.display = "none";
-      openMenu.closedMenu.style.display = "block";
+      selectNavElements.closedMenu.style.display = "none";
+      selectNavElements.nav.style.display = "block";
     });
   });
 })();
 
 const styleMenu = (function () {
-  const menuSpan = document.querySelector("nav > section:first-child span");
-  const menuImg = document.querySelector("nav > section:first-child img");
-
-  menuSpan.addEventListener("mouseover", () => {
-    menuSpan.style.color = "rgb(226, 172, 36)";
-    menuImg.style.backgroundColor = "rgba(226, 172, 36, 0.8)";
+  selectNavElements.menuSpan.addEventListener("mouseover", () => {
+    selectNavElements.menuSpan.style.color = "rgb(226, 172, 36)";
+    selectNavElements.menuImg.style.backgroundColor = "rgba(226, 172, 36, 0.8)";
   });
-  menuSpan.addEventListener("mouseout", () => {
-    menuSpan.style.color = "black";
-    menuImg.style.backgroundColor = "rgb(201, 150, 23)";
+  selectNavElements.menuSpan.addEventListener("mouseout", () => {
+    selectNavElements.menuSpan.style.color = "black";
+    selectNavElements.menuImg.style.backgroundColor = "rgb(201, 150, 23)";
   });
 
-  menuImg.addEventListener("mouseover", () => {
-    menuSpan.style.color = "rgb(226, 172, 36)";
-    menuImg.style.backgroundColor = "rgba(226, 172, 36, 0.8)";
+  selectNavElements.menuImg.addEventListener("mouseover", () => {
+    selectNavElements.menuSpan.style.color = "rgb(226, 172, 36)";
+    selectNavElements.menuImg.style.backgroundColor = "rgba(226, 172, 36, 0.8)";
   });
-  menuImg.addEventListener("mouseout", () => {
-    menuSpan.style.color = "black";
-    menuImg.style.backgroundColor = "rgb(201, 150, 23)";
+  selectNavElements.menuImg.addEventListener("mouseout", () => {
+    selectNavElements.menuSpan.style.color = "black";
+    selectNavElements.menuImg.style.backgroundColor = "rgb(201, 150, 23)";
   });
 })();
 
 const hoveringEffectOnNavDivs = (function () {
-  const navDivs = document.querySelectorAll(
-    ".sec-section > div, .last-section > div",
-  );
-
-  navDivs.forEach((div, index) => {
+  selectNavElements.navDivs.forEach((div, index) => {
     div.classList.add(`div${index}`);
     const divSpan = document.querySelector(`.div${index} span`);
     const divImg = document.querySelector(`.div${index} img`);

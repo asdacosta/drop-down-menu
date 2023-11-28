@@ -39,8 +39,37 @@ nav {
     flex-direction: column;
     justify-content: flex-start;
     gap: 2rem;
-    min-width: 11rem;
     background-color: rgba(0, 150, 187, 0.9);
+    animation: slideIn 800ms ease-in-out 0s 1 forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        width: 100%;
+    }
+    to {
+        opacity: 0;
+        width: 0;
+    }
+}
+
+.animateOut {
+    animation: slideOut 300ms ease-in 0s 1 forwards;
 }
 
 nav > section:first-child {

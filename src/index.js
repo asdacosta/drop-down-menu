@@ -40,8 +40,8 @@ const styleMenu = (function () {
   const menuImg = document.querySelector("nav > section:first-child img");
 
   menuSpan.addEventListener("mouseover", () => {
-    menuSpan.style.color = "rgb(97, 73, 8)";
-    menuImg.style.backgroundColor = "rgba(201, 150, 23, 0.8)";
+    menuSpan.style.color = "rgb(226, 172, 36)";
+    menuImg.style.backgroundColor = "rgba(226, 172, 36, 0.8)";
   });
   menuSpan.addEventListener("mouseout", () => {
     menuSpan.style.color = "black";
@@ -49,11 +49,41 @@ const styleMenu = (function () {
   });
 
   menuImg.addEventListener("mouseover", () => {
-    menuSpan.style.color = "rgb(97, 73, 8)";
-    menuImg.style.backgroundColor = "rgba(201, 150, 23, 0.8)";
+    menuSpan.style.color = "rgb(226, 172, 36)";
+    menuImg.style.backgroundColor = "rgba(226, 172, 36, 0.8)";
   });
   menuImg.addEventListener("mouseout", () => {
     menuSpan.style.color = "black";
     menuImg.style.backgroundColor = "rgb(201, 150, 23)";
+  });
+})();
+
+const hoveringEffectOnNavDivs = (function () {
+  const navDivs = document.querySelectorAll(
+    ".sec-section > div, .last-section > div",
+  );
+
+  navDivs.forEach((div, index) => {
+    div.classList.add(`div${index}`);
+    const divSpan = document.querySelector(`.div${index} span`);
+    const divImg = document.querySelector(`.div${index} img`);
+
+    divSpan.addEventListener("mouseover", () => {
+      divImg.style.background = "rgb(226, 172, 36)";
+      divSpan.style.color = "rgb(226, 172, 36)";
+    });
+    divSpan.addEventListener("mouseout", () => {
+      divImg.style.background = "none";
+      divSpan.style.color = "black";
+    });
+
+    divImg.addEventListener("mouseover", () => {
+      divImg.style.background = "rgb(226, 172, 36)";
+      divSpan.style.color = "rgb(226, 172, 36)";
+    });
+    divImg.addEventListener("mouseout", () => {
+      divImg.style.background = "none";
+      divSpan.style.color = "black";
+    });
   });
 })();

@@ -25,6 +25,15 @@ body > div {
     cursor: pointer;
 }
 
+body > div:hover > img {
+    background-color: rgba(201, 150, 23, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+nav > section:first-child span:hover {
+    color: rgb(82, 62, 7);
+}
+
 nav {
     display: none;
     flex-direction: column;

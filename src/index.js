@@ -45,48 +45,61 @@ const closeMenu = (function () {
   });
 })();
 
-const styleMenu = (function () {
+const styleMenuLauncher = function (
+  spanColor,
+  imgColor,
+  spanDefault,
+  imgDefault,
+) {
   selectNavElements.menuSpan.addEventListener("mouseover", () => {
-    selectNavElements.menuSpan.style.color = "rgb(226, 172, 36)";
-    selectNavElements.menuImg.style.backgroundColor = "rgba(226, 172, 36, 0.8)";
+    selectNavElements.menuSpan.style.color = spanColor;
+    selectNavElements.menuImg.style.backgroundColor = imgColor;
   });
   selectNavElements.menuSpan.addEventListener("mouseout", () => {
-    selectNavElements.menuSpan.style.color = "black";
-    selectNavElements.menuImg.style.backgroundColor = "rgb(201, 150, 23)";
+    selectNavElements.menuSpan.style.color = spanDefault;
+    selectNavElements.menuImg.style.backgroundColor = imgDefault;
   });
 
   selectNavElements.menuImg.addEventListener("mouseover", () => {
-    selectNavElements.menuSpan.style.color = "rgb(226, 172, 36)";
-    selectNavElements.menuImg.style.backgroundColor = "rgba(226, 172, 36, 0.8)";
+    selectNavElements.menuSpan.style.color = spanColor;
+    selectNavElements.menuImg.style.backgroundColor = imgColor;
   });
   selectNavElements.menuImg.addEventListener("mouseout", () => {
-    selectNavElements.menuSpan.style.color = "black";
-    selectNavElements.menuImg.style.backgroundColor = "rgb(201, 150, 23)";
+    selectNavElements.menuSpan.style.color = spanDefault;
+    selectNavElements.menuImg.style.backgroundColor = imgDefault;
   });
-})();
+};
 
-const hoveringEffectOnNavDivs = (function () {
+const hoveringEffectOnNavDivs = function (color, imgDefault, spanDefault) {
   selectNavElements.navDivs.forEach((div, index) => {
     div.classList.add(`div${index}`);
     const divSpan = document.querySelector(`.div${index} span`);
     const divImg = document.querySelector(`.div${index} img`);
 
     divSpan.addEventListener("mouseover", () => {
-      divImg.style.background = "rgb(226, 172, 36)";
-      divSpan.style.color = "rgb(226, 172, 36)";
+      divImg.style.background = color;
+      divSpan.style.color = color;
     });
     divSpan.addEventListener("mouseout", () => {
-      divImg.style.background = "none";
-      divSpan.style.color = "black";
+      divImg.style.background = imgDefault;
+      divSpan.style.color = spanDefault;
     });
 
     divImg.addEventListener("mouseover", () => {
-      divImg.style.background = "rgb(226, 172, 36)";
-      divSpan.style.color = "rgb(226, 172, 36)";
+      divImg.style.background = color;
+      divSpan.style.color = color;
     });
     divImg.addEventListener("mouseout", () => {
-      divImg.style.background = "none";
-      divSpan.style.color = "black";
+      divImg.style.background = imgDefault;
+      divSpan.style.color = spanDefault;
     });
   });
-})();
+};
+
+styleMenuLauncher(
+  "rgb(226, 172, 36)",
+  "rgba(226, 172, 36, 0.8)",
+  "black",
+  "rgb(201, 150, 23)",
+);
+hoveringEffectOnNavDivs("rgb(226, 172, 36)", "none", "black");

@@ -3,4 +3,77 @@
     margin: 0;
     box-sizing: border-box;
     letter-spacing: 1.2px;
+    font-size: 1.1rem;
+    /* border: 2px solid tomato; */
+}
+
+body {
+    display: grid;
+    grid-template: 1fr / 1fr 5.5fr;
+    height: 100vh;
+    background: url(./imgs/blue-mug-with-coffee.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+body > div {
+    justify-self: flex-start;
+    align-self: flex-start;
+    display: block;
+    margin: 1rem;
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+nav {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
+    min-width: 11rem;
+    background-color: rgba(0, 150, 187, 0.9);
+}
+
+nav > section:first-child {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
+}
+
+nav > section:first-child > div {
+    justify-content: center;
+}
+
+nav > section:first-child span {
+    font-size: 1.5rem;
+}
+
+nav > section:first-child img, body > div > img {
+    width: 2rem;
+    background-color: rgb(201, 150, 23);
+    border-radius: 10px;
+    padding: 0.2rem;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.7rem;
+}
+
+nav img, nav span {
+    cursor: pointer;
+}
+
+nav img {
+    width: 1.5rem;
+}
+
+h6 {
+    font-size: 0.8rem;
+    font-weight: 800;
+    padding-left: 0.7rem;
+    cursor: context-menu;
+    color: rgb(201, 150, 23);
 }

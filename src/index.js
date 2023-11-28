@@ -91,10 +91,55 @@ const hoveringEffectOnNavDivs = function (color, imgDefault, spanDefault) {
   });
 };
 
+const clickEffectOnNavDivs = function (color, imgDefault, spanDefault) {
+  selectNavElements.navDivs.forEach((div) => {
+    const allDivSpans = document.querySelectorAll('.sec-section span');
+    const allDivImgs = document.querySelectorAll('.last-section img');
+    const divSpan = document.querySelector(`.${div.className} span`);
+    const divImg = document.querySelector(`.${div.className} img`);
+
+    divSpan.addEventListener('click', () => {
+      selectNavElements.navDivs.forEach((div) => {
+        div.style.border = '0';
+        // FIXME: Use all... instead
+        // divSpan.addEventListener('mouseover', () => {
+        //   divImg.style.background = color;
+        //   divSpan.style.color = color;
+        // });
+      });
+      divSpan.addEventListener('mouseover', () => {
+        divImg.style.background = imgDefault;
+        divSpan.style.color = spanDefault;
+      });
+
+      div.style.border = `2px solid ${color}`;
+    });
+    divImg.addEventListener('click', () => {
+      selectNavElements.navDivs.forEach((div) => {
+        div.style.border = '0';
+        // FIXME: Use all... instead
+        // divSpan.addEventListener('mouseover', () => {
+        //   divImg.style.background = color;
+        //   divSpan.style.color = color;
+        // });
+      });
+      divSpan.addEventListener('mouseover', () => {
+        divImg.style.background = imgDefault;
+        divSpan.style.color = spanDefault;
+      });
+
+      div.style.border = `2px solid ${color}`;
+    });
+  });
+};
+
 styleMenuLauncher(
   'rgb(226, 172, 36)',
   'rgba(226, 172, 36, 0.8)',
   'black',
   'rgb(201, 150, 23)',
 );
+
 hoveringEffectOnNavDivs('rgb(226, 172, 36)', 'none', 'black');
+
+clickEffectOnNavDivs('rgb(226, 172, 36)', 'none', 'black');

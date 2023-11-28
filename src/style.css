@@ -97,6 +97,10 @@ nav > section:first-child img, body > div > img {
     border-radius: 10px;
 }
 
+.sec-section div, .last-section div {
+    border-radius: 50px;
+}
+
 nav div {
     display: flex;
     align-items: center;

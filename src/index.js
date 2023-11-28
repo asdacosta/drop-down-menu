@@ -31,7 +31,10 @@ const selectNavElements = (function () {
 
 const openMenu = (function () {
   selectNavElements.closedMenu.addEventListener("click", () => {
-    selectNavElements.closedMenu.style.display = "none";
+    selectNavElements.nav.classList.remove("animateOut");
+    setTimeout(() => {
+      selectNavElements.closedMenu.style.display = "none";
+    }, 200);
     selectNavElements.nav.style.display = "flex";
   });
 })();
@@ -39,8 +42,11 @@ const openMenu = (function () {
 const closeMenu = (function () {
   selectNavElements.openedMenu.forEach((element) => {
     element.addEventListener("click", () => {
-      selectNavElements.nav.style.display = "none";
-      selectNavElements.closedMenu.style.display = "block";
+      selectNavElements.nav.classList.add("animateOut");
+      setTimeout(() => {
+        selectNavElements.nav.style.display = "none";
+        selectNavElements.closedMenu.style.display = "block";
+      }, 200);
     });
   });
 })();

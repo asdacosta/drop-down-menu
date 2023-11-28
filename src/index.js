@@ -11,17 +11,17 @@ const importAllImages = (function () {
 })();
 
 const selectNavElements = (function () {
-  // openMenu fxn
+  // For openMenu fxn
   const closedMenu = document.querySelector("body > div");
   const nav = document.querySelector("nav");
-  // closeMenu fxn
+  // For closeMenu fxn
   const openedMenu = document.querySelectorAll(
     "nav > section:first-child > div > *",
   );
-  // styleMenu fxn
+  // For styleMenu fxn
   const menuSpan = document.querySelector("nav > section:first-child span");
   const menuImg = document.querySelector("nav > section:first-child img");
-  // hoveringEffectOnNavDivs fxn
+  // For hoveringEffectOnNavDivs fxn
   const navDivs = document.querySelectorAll(
     ".sec-section > div, .last-section > div",
   );

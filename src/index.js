@@ -39,8 +39,8 @@ const openMenu = (function () {
 const closeMenu = (function () {
   selectNavElements.openedMenu.forEach((element) => {
     element.addEventListener("click", () => {
-      selectNavElements.closedMenu.style.display = "none";
-      selectNavElements.nav.style.display = "block";
+      selectNavElements.nav.style.display = "none";
+      selectNavElements.closedMenu.style.display = "block";
     });
   });
 })();

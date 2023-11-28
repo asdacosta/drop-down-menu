@@ -69,7 +69,7 @@ nav {
 }
 
 .animateOut {
-    animation: slideOut 300ms ease-in 0s 1 forwards;
+    animation: slideOut 200ms ease-in 0s 1 forwards;
 }
 
 nav > section:first-child {

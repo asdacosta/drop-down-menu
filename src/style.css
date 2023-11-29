@@ -149,3 +149,21 @@ h1 {
   color: rgb(226, 172, 36);
   cursor: context-menu;
 }
+
+@media (max-width: 1300px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+}

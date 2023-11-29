@@ -16,7 +16,7 @@
     <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white" alt="npm badge">
     <img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white" alt="ESLint badge">
     <img src="https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black" alt="Prettier badge">
-    <h4><a href="">Live Preview</a></h4>
+    <h4><a href="https://asdacosta.github.io/drop-down-menu/">Live Preview</a></h4>
 </div>
 
 **Demo:**
@@ -54,8 +54,11 @@ Developers, users, recruiters.
 |`src/index.js`| The main JavaScript entry point that bundling begins.|
 |`dist/*`| Output files from bundling of files in directory `src/`.|
 |`dist/main.js`| Main JavaScript output file that contains the bundled JavaScript code. Code is minified and optimized for deployment (Due to mode set to production in webpack config). |
-|`webpack.config.js`| Configuration file for webpack. It enables the bundling of different assets.|
+|`webpack.config.js`| Configuration file for Webpack (Module bundler). It enables the bundling of different assets.|
+|`.prettierrc`| Configuration file for Prettier (Code formatter).|
+|`.eslintrc.json`| Configuration file for ESLint (JavaScript linting utility).|
 |`package*`| Contains details of project and dependencies versions.|
+|`*ignore`| Contains directories and files a particular Technology should ignore.|
 </details>
 
 ## ©️ Credit
@@ -71,7 +74,7 @@ Developers, users, recruiters.
 <details>
 <summary>Invert</summary>
 
-- [ ] Make hovering effect happen on img itself instead of background.
+- [ ] Make color hovering effect happen on img itself instead of background.
 
 </details>
 

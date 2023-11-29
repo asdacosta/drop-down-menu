@@ -21,15 +21,20 @@
 
 **Demo:**
 
-![Live Demo](./)
+![Live Demo](./view-imgs/drop-down.gif)
 
 <details>
 
 **<summary>Screen views</summary>**
 
 **Desktop View:**
+
+<img src="./view-imgs/drop-down-desktop.png" alt="desktop view">
 <br>
+
 **Mobile View:**
+
+<img src="./view-imgs/drop-down-mobile.png" alt="mobile view" width="30%" height="200px">
 </details>
 
 ## 🌐 Origin

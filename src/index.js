@@ -93,20 +93,15 @@ const hoveringEffectOnNavDivs = function (color, imgDefault, spanDefault) {
 
 const clickEffectOnNavDivs = function (color, imgDefault, spanDefault) {
   selectNavElements.navDivs.forEach((div) => {
-    const allDivSpans = document.querySelectorAll('.sec-section span');
-    const allDivImgs = document.querySelectorAll('.last-section img');
     const divSpan = document.querySelector(`.${div.className} span`);
     const divImg = document.querySelector(`.${div.className} img`);
 
     divSpan.addEventListener('click', () => {
       selectNavElements.navDivs.forEach((div) => {
         div.style.border = '0';
-        // FIXME: Use all... instead
-        // divSpan.addEventListener('mouseover', () => {
-        //   divImg.style.background = color;
-        //   divSpan.style.color = color;
-        // });
       });
+      hoveringEffectOnNavDivs('rgb(226, 172, 36)', 'none', 'black');
+
       divSpan.addEventListener('mouseover', () => {
         divImg.style.background = imgDefault;
         divSpan.style.color = spanDefault;
@@ -114,15 +109,13 @@ const clickEffectOnNavDivs = function (color, imgDefault, spanDefault) {
 
       div.style.border = `2px solid ${color}`;
     });
+
     divImg.addEventListener('click', () => {
       selectNavElements.navDivs.forEach((div) => {
         div.style.border = '0';
-        // FIXME: Use all... instead
-        // divSpan.addEventListener('mouseover', () => {
-        //   divImg.style.background = color;
-        //   divSpan.style.color = color;
-        // });
       });
+      hoveringEffectOnNavDivs('rgb(226, 172, 36)', 'none', 'black');
+
       divSpan.addEventListener('mouseover', () => {
         divImg.style.background = imgDefault;
         divSpan.style.color = spanDefault;

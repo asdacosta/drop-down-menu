@@ -34,7 +34,7 @@
 
 **Mobile View:**
 
-<img src="./view-imgs/drop-down-mobile.png" alt="mobile view" width="30%" height="200px">
+<img src="./view-imgs/drop-down-mobile.png" alt="mobile view" width="150px" height="250px">
 </details>
 
 ## 🌐 Origin

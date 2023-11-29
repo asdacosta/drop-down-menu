@@ -67,6 +67,9 @@ Developers, users, recruiters.
 
 | File | Description |
 | - | - |
+|`src/imgs/down-arrow.png`| Icon created by Tanah Basah on [Flaticon](https://www.flaticon.com/free-icons/).|
+|`src/imgs/blue-mug-with-cofee.png`| Photo created by Frank Leuderalbert on [Unsplash](https://unsplash.com/).|
+
 
 </details>
 

@@ -23,12 +23,23 @@ const selectNavElements = (function () {
   return { closedMenu, nav, openedMenu, menuSpan, menuImg, navDivs };
 })();
 
+const changeHeader = function (toggle) {
+  const header = document.querySelector('h1');
+  header.textContent = `Drop Me ${toggle}`;
+};
+
 const openMenu = (function () {
   selectNavElements.closedMenu.addEventListener('click', () => {
     selectNavElements.nav.classList.remove('animateOut');
+
     setTimeout(() => {
       selectNavElements.closedMenu.style.display = 'none';
     }, 200);
+
+    setTimeout(() => {
+      changeHeader('Out');
+    }, 800);
+
     selectNavElements.nav.style.display = 'flex';
   });
 })();
@@ -37,9 +48,11 @@ const closeMenu = (function () {
   selectNavElements.openedMenu.forEach((element) => {
     element.addEventListener('click', () => {
       selectNavElements.nav.classList.add('animateOut');
+
       setTimeout(() => {
         selectNavElements.nav.style.display = 'none';
         selectNavElements.closedMenu.style.display = 'block';
+        changeHeader('Down');
       }, 200);
     });
   });

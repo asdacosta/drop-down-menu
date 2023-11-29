@@ -136,6 +136,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  padding-right: 10%;
 }
 
 h1 {

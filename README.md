@@ -21,7 +21,7 @@
 
 **Demo:**
 
-![Live Demo](./view-imgs/drop-down.gif)
+![Live Demo](./readme-assets/drop-down.gif)
 
 <details>
 
@@ -29,12 +29,12 @@
 
 **Desktop View:**
 
-<img src="./view-imgs/drop-down-desktop.png" alt="desktop view">
+<img src="./readme-assets/drop-down-desktop.png" alt="desktop view">
 <br>
 
 **Mobile View:**
 
-<img src="./view-imgs/drop-down-mobile.png" alt="mobile view" width="45%" height="45%">
+<img src="./readme-assets/drop-down-mobile.png" alt="mobile view" width="45%" height="45%">
 </details>
 
 ## 🌐 Origin
@@ -67,7 +67,7 @@ Developers, users, recruiters.
 |`.eslintrc.json`| Configuration file for ESLint (JavaScript linting utility).|
 |`package*`| Contains details of project and dependencies versions.|
 |`*ignore`| Contains directories and files a particular Technology should ignore.|
-|`view-imgs/*`| Live demo and different screen views used in `README.md`.|
+|`readme-assets/*`| Live demo and different screen views used in `README.md`.|
 
 </details>
 
